@@ -4,6 +4,14 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
 	<display-name>微信公共平台开发者接口</display-name>
+	<listener>
+          <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+      </listener>
+ 
+     <servlet>
+         <servlet-name>WeChatFilter</servlet-name>
+         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+     </servlet>
 	<filter>
 		<filter-name>WeChatFilter</filter-name>
 		<filter-class>com.gson.WeChatFilter</filter-class>

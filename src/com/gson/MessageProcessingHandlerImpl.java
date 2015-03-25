@@ -2,6 +2,7 @@ package com.gson;
 
 import com.gson.bean.InMessage;
 import com.gson.bean.OutMessage;
+import com.gson.bean.TextOutMessage;
 import com.gson.inf.MessageProcessingHandler;
 
 public class MessageProcessingHandlerImpl implements MessageProcessingHandler{
@@ -15,7 +16,9 @@ public class MessageProcessingHandlerImpl implements MessageProcessingHandler{
 	@Override
 	public void textTypeMsg(InMessage msg) {
 		// TODO Auto-generated method stub
-		
+		TextOutMessage out = new TextOutMessage();
+		out.setContent("您的消息已经收到！");
+		setOutMessage(out);
 	}
 
 	@Override
